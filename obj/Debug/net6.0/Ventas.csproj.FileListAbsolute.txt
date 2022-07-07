@@ -1,5 +1,4 @@
 D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\appsettings.Development.json
-D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\appsettings.json
 D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\Ventas.exe
 D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\Ventas.deps.json
 D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\Ventas.runtimeconfig.json
@@ -273,3 +272,4 @@ D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\runtimes\win\lib\net6.0\S
 D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Programacion\CSharpProjects\Ventas\bin\Debug\net6.0\appsettings.json

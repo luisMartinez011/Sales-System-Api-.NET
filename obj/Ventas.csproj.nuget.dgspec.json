@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj": {}
+    "D:\\Programacion\\CSharpProjects\\ventas\\Ventas.csproj": {}
   },
   "projects": {
-    "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj": {
+    "D:\\Programacion\\CSharpProjects\\ventas\\Ventas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj",
+        "projectUniqueName": "D:\\Programacion\\CSharpProjects\\ventas\\Ventas.csproj",
         "projectName": "Ventas",
-        "projectPath": "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj",
+        "projectPath": "D:\\Programacion\\CSharpProjects\\ventas\\Ventas.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Programacion\\CSharpProjects\\Ventas\\obj\\",
+        "outputPath": "D:\\Programacion\\CSharpProjects\\ventas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",

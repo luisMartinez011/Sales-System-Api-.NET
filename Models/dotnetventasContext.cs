@@ -19,9 +19,11 @@ namespace Ventas.Models
         public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Concepto> Conceptos { get; set; } = null!;
         public virtual DbSet<Producto> Productos { get; set; } = null!;
+        public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
         public virtual DbSet<Venta> Ventas { get; set; } = null!;
 
         
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Cliente>(entity =>
@@ -84,6 +86,21 @@ namespace Ventas.Models
                     .HasColumnName("nombre");
 
                 entity.Property(e => e.Precio).HasColumnName("precio");
+            });
+
+            modelBuilder.Entity<Usuario>(entity =>
+            {
+                entity.ToTable("usuarios");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(50)
+                    .HasColumnName("email");
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(256)
+                    .HasColumnName("password");
             });
 
             modelBuilder.Entity<Venta>(entity =>
