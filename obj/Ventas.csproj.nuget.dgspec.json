@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programacion\\CSharpProjects\\ventas\\Ventas.csproj": {}
+    "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj": {}
   },
   "projects": {
-    "D:\\Programacion\\CSharpProjects\\ventas\\Ventas.csproj": {
+    "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programacion\\CSharpProjects\\ventas\\Ventas.csproj",
+        "projectUniqueName": "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj",
         "projectName": "Ventas",
-        "projectPath": "D:\\Programacion\\CSharpProjects\\ventas\\Ventas.csproj",
+        "projectPath": "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Programacion\\CSharpProjects\\ventas\\obj\\",
+        "outputPath": "D:\\Programacion\\CSharpProjects\\Ventas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,25 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "EntityFramework6.Npgsql": {
               "target": "Package",
               "version": "[6.4.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

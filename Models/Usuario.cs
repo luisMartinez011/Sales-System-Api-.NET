@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 
 namespace Ventas.Models
 {
-    public partial class Usuario
+    public partial class Usuario 
     {
-        public int Id { get; set; }
-        public string? Email { get; set; }
-        public string? Password { get; set; }
+        public int IdUsers { get; set; }
+        public string Email { get; set; } = null!;
+        public string Password { get; set; } = null!;
+        public string Name { get; set; } = null!;
     }
 }

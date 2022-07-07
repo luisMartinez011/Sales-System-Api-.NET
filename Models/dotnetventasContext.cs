@@ -90,13 +90,23 @@ namespace Ventas.Models
 
             modelBuilder.Entity<Usuario>(entity =>
             {
+                entity.HasKey(e => e.IdUsers)
+                    .HasName("usuarios_pkey");
+
                 entity.ToTable("usuarios");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.IdUsers)
+                    .HasColumnName("id_users")
+                    .HasDefaultValueSql("nextval('usuarios_id_seq'::regclass)");
 
                 entity.Property(e => e.Email)
                     .HasMaxLength(50)
                     .HasColumnName("email");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(100)
+                    .HasColumnName("name")
+                    .UseCollation("C");
 
                 entity.Property(e => e.Password)
                     .HasMaxLength(256)
