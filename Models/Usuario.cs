@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Ventas.Models
 {
-    public partial class Usuario 
+    public partial class Usuario
     {
         public int IdUsers { get; set; }
         public string Email { get; set; } = null!;

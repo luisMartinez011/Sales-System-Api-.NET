@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +9,6 @@ using Ventas.Models;
 
 namespace Ventas.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ClientesController : ControllerBase
@@ -24,13 +22,22 @@ namespace Ventas.Controllers
 
         // GET: api/Clientes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Cliente>>> GetClientes()
+        public async Task<ActionResult<Object>> GetClientes()
         {
           if (_context.Clientes == null)
           {
               return NotFound();
           }
-            return await _context.Clientes.ToListAsync();
+            var salesdata = await _context.Clientes
+                  .Include(s => s.Venta)
+                  .Select(s => new
+                  {
+                      Id = s.Id,
+                      name = s.Name,
+                      ventas = s.Venta
+                  })
+                  .ToListAsync();
+            return salesdata;
         }
 
         // GET: api/Clientes/5

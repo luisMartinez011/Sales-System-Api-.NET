@@ -9,6 +9,7 @@
       "Ventas/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
+          "DateOnlyTimeOnly.AspNet": "1.0.3",
           "EntityFramework6.Npgsql": "6.4.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.6",
           "Microsoft.AspNetCore.Identity": "2.2.0",
@@ -30,6 +31,14 @@
           "lib/net6.0/BCrypt.Net-Next.dll": {
             "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.0.3.0"
+          }
+        }
+      },
+      "DateOnlyTimeOnly.AspNet/1.0.3": {
+        "runtime": {
+          "lib/net6.0/DateOnlyTimeOnly.AspNet.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
           }
         }
       },
@@ -2609,6 +2618,13 @@
       "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
       "path": "bcrypt.net-next/4.0.3",
       "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
+    },
+    "DateOnlyTimeOnly.AspNet/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vwKeOUm+E9T9XHtKalYCla2lYim6eR4GgsSWKB4UGQPGL5ZtKVOXYh30SdEAP5ZVI93NaqCdqYfiznJ9wuJGFQ==",
+      "path": "dateonlytimeonly.aspnet/1.0.3",
+      "hashPath": "dateonlytimeonly.aspnet.1.0.3.nupkg.sha512"
     },
     "EntityFramework/6.4.0": {
       "type": "package",

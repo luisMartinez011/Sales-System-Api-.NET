@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FvCwSgeVUSRTJGVuSRjV23ZlJgUyXOIA0Ih4HH4GfzCrqimF6lVm+Sssp9KvDVR/S//JJSY1EHBUfvYlvx8QEw==",
+  "dgSpecHash": "6L9kJAl4GbjfJoEM3XthyP0zT2ECqlQXD877uKr1iryN7WLupWP6GnaE8ELAMYUPtFiHclMkgiADIkuuyuSkPQ==",
   "success": true,
   "projectFilePath": "D:\\Programacion\\CSharpProjects\\Ventas\\Ventas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\dateonlytimeonly.aspnet\\1.0.3\\dateonlytimeonly.aspnet.1.0.3.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\entityframework6.npgsql\\6.4.3\\entityframework6.npgsql.6.4.3.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

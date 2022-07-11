@@ -81,7 +81,7 @@ namespace Ventas.Controllers
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("PostUser", new { id = usuario.IdUsers }, usuario);
+            return CreatedAtAction("PostUser", new { id = usuario.IdUsers }, usuario.Email);
         }
         private async Task<Usuario> GetUser(string email)
         {

@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "DateOnlyTimeOnly.AspNet": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "EntityFramework6.Npgsql": {
               "target": "Package",
               "version": "[6.4.3, )"

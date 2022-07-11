@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Text.Json;
 using Ventas.Models;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -15,10 +16,14 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("*");
+                          policy.WithOrigins("*")
+                          .AllowAnyHeader()
+                                                  .AllowAnyMethod(); ;
                       });
 });
-builder.Services.AddControllers();
+builder.Services
+    .AddControllers(options => options.UseDateOnlyTimeOnlyStringConverters())
+    .AddJsonOptions(options => options.UseDateOnlyTimeOnlyStringConverters());
 builder.Services.AddDbContext<dotnetventasContext>(options =>
             options.UseNpgsql("name=ConnectionStrings:Real"));
 

@@ -11,7 +11,7 @@ namespace Ventas.Models
         }
 
         public long Id { get; set; }
-        public string Name { get; set; } = null!;
+        public string Name { get; set; }
 
         public virtual ICollection<Venta> Venta { get; set; }
     }

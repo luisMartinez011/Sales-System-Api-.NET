@@ -22,7 +22,6 @@ namespace Ventas.Models
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
         public virtual DbSet<Venta> Ventas { get; set; } = null!;
 
-        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,40 +38,35 @@ namespace Ventas.Models
 
             modelBuilder.Entity<Concepto>(entity =>
             {
-                entity.HasKey(e => e.IdVentas)
-                    .HasName("concepto_pkey");
-
                 entity.ToTable("concepto");
 
-                entity.Property(e => e.IdVentas)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("id_ventas");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Cantidad).HasColumnName("cantidad");
-
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("id");
 
                 entity.Property(e => e.IdProducto)
                     .ValueGeneratedOnAdd()
                     .HasColumnName("id_producto");
 
-                entity.Property(e => e.Importe).HasColumnName("importe");
+                entity.Property(e => e.IdVentas)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("id_ventas");
 
-                entity.Property(e => e.PrecioUnitario).HasColumnName("precio_unitario");
+                entity.Property(e => e.Importe).HasColumnName("importe");
 
                 entity.HasOne(d => d.IdProductoNavigation)
                     .WithMany(p => p.Conceptos)
                     .HasForeignKey(d => d.IdProducto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("concepto_productos_fkey");
+                    .HasConstraintName("concepto_productos_fkey")
+                    .IsRequired(false);
 
                 entity.HasOne(d => d.IdVentasNavigation)
-                    .WithOne(p => p.Concepto)
-                    .HasForeignKey<Concepto>(d => d.IdVentas)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("concepto_ventas_fkey");
+                    .WithMany(p => p.Conceptos)
+                    .IsRequired(false)
+                    .HasForeignKey(d => d.IdVentas)
+                    .HasConstraintName("concepto_ventas_fkey")
+                    .IsRequired(false);
             });
 
             modelBuilder.Entity<Producto>(entity =>
@@ -132,7 +126,7 @@ namespace Ventas.Models
                 entity.HasOne(d => d.IdClienteNavigation)
                     .WithMany(p => p.Venta)
                     .HasForeignKey(d => d.IdCliente)
-                    .HasConstraintName("ventas_fkey");
+                    .IsRequired(false);
             });
 
             OnModelCreatingPartial(modelBuilder);
