@@ -92,7 +92,7 @@ namespace Ventas.Controllers
         // POST: api/Clientes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
+        public async Task<IActionResult> PostCliente(Cliente cliente)
         {
           if (_context.Clientes == null)
           {
@@ -101,7 +101,7 @@ namespace Ventas.Controllers
             _context.Clientes.Add(cliente);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCliente", new { id = cliente.Id }, cliente);
+            return NoContent();
         }
 
         // DELETE: api/Clientes/5

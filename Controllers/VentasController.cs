@@ -22,13 +22,25 @@ namespace Ventas.Controllers
 
         // GET: api/Ventas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Venta>>> GetVentas()
+        public async Task<ActionResult<object>> GetVentas()
         {
           if (_context.Ventas == null)
           {
               return NotFound();
           }
-            return await _context.Ventas.ToListAsync();
+            var salesdata = await _context.Ventas
+                  .Include(s => s.Conceptos)
+                  .Select(s => new
+                  {
+                      Id = s.Id,
+                      fecha = s.Fecha,
+                      total = s.Total,
+                      idCliente = s.IdCliente,
+                      Cliente = s.IdClienteNavigation.Name,
+                      Conceptos = s.Conceptos
+                  })
+                  .ToListAsync();
+            return salesdata;
         }
 
         // GET: api/Ventas/5
